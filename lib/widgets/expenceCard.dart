@@ -16,14 +16,9 @@ class ExpenceCard extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(5),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black,
-            blurRadius: 0.1,
-            spreadRadius: 0.1,
-            offset: Offset(0.5, 0.6), // shadow direction: bottom right
-          )
-        ],
+        // border: Border(
+        //   bottom: BorderSide(width: 1, color: Color.fromARGB(255, 1, 42, 33)),
+        // ),
       ),
       width: double.infinity,
       margin: EdgeInsets.fromLTRB(10, 5, 10, 5),
@@ -34,7 +29,7 @@ class ExpenceCard extends StatelessWidget {
             width: 65,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(100),
-              color: Colors.deepPurple,
+              color: Color.fromARGB(255, 99, 217, 187),
             ),
             alignment: Alignment.center,
             child: Text(
@@ -54,7 +49,7 @@ class ExpenceCard extends StatelessWidget {
                 Text(
                   expence.title,
                   style: TextStyle(
-                    color: Colors.black87,
+                    color: Color(0xff0f4a3c),
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
                   ),
@@ -63,7 +58,7 @@ class ExpenceCard extends StatelessWidget {
                   DateFormat.yMMMd().format(expence.date),
                   textAlign: TextAlign.start,
                   style: TextStyle(
-                    color: Colors.black54,
+                    color: Color.fromARGB(137, 25, 99, 97),
                     fontSize: 16,
                     fontWeight: FontWeight.w400,
                   ),
@@ -72,7 +67,7 @@ class ExpenceCard extends StatelessWidget {
             ),
           ),
           Container(
-            margin: EdgeInsets.only(left: 125),
+            margin: EdgeInsets.only(left: 140),
             child: GestureDetector(
               onTap: () {
                 onDelete(expence.id);
@@ -80,7 +75,7 @@ class ExpenceCard extends StatelessWidget {
               child: Icon(
                 Icons.delete,
                 size: 30,
-                color: Color.fromARGB(255, 209, 55, 44),
+                color: Color.fromARGB(255, 2, 50, 46),
                 semanticLabel: 'delete',
               ),
             ),

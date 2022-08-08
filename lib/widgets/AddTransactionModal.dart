@@ -65,8 +65,6 @@ class _StateAddTransactionModal extends State<AddTransactionModal> {
             textColor: Colors.purple,
             child: Text('Add transactions', style: TextStyle(fontSize: 16)),
             onPressed: () {
-              print(
-                  'IN ADD MODAL\n TITLE :: ${titleController.text}, AMOUNT :: ${amountController.text}');
               onAdd(titleController.text, double.parse(amountController.text),
                   selectedDate);
               Navigator.pop(context);
